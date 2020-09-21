@@ -1,0 +1,83 @@
+﻿/* myStyle.css */
+body {
+    background-color: powderblue;
+    color: orange;
+}
+h2 {
+    color: black;
+    text-align: center;
+    font: medium 100;
+    font-size:30px;
+}
+h1 {
+    color: palevioletred;
+    text-align: center;
+    font: italic 300% fantasy;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+p {
+    background-color: sandybrown;
+    color: antiquewhite;
+    text-align: center;
+    border: ridge;
+    font-size: 30px;
+   font-weight: 900;
+}
+p #message{
+    color:black
+
+}
+
+#logo{
+    position:fixed;
+    top:0;
+    left:0;
+}
+#logo1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border:5px solid red ridge;
+}
+/*Navigation Bar*/
+.topnav{    
+    background-color:aqua;
+    overflow: hidden;
+}
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        
+        color: forestgreen;
+        text-align: center;
+        width:50%;
+        padding: 12px;
+        text-decoration: underline;
+        font-size: 26px;
+        nav-index:auto;
+    }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: red;
+            color: whitesmoke;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: none;
+            color: forestgreen;
+        }

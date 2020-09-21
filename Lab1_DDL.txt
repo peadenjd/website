@@ -1,0 +1,92 @@
+DROP TABLE VolunteerEvent;
+DROP TABLE CoordinatorEvent;
+DROP TABLE StudentAttendance;
+DROP TABLE Volunteer;
+DROP TABLE Coordinator;
+DROP TABLE Student;
+DROP TABLE tshirt;
+DROP TABLE Teacher;
+DROP TABLE School;
+DROP TABLE Events;
+
+
+
+CREATE TABLE Events(
+EventID int NOT NULL PRIMARY KEY,
+EventTitle varchar(255) NOT NULL,
+Date DATE,
+Time TIME,
+Location varchar(255)
+);
+
+CREATE TABLE School(
+SchoolID int NOT NULL Primary KEY,
+Name varchar(255),
+PhoneNumber INTEGER,
+PrimaryContactName varchar(255),
+SchoolAdress varchar(255),
+City varchar(255),
+State varchar(255),
+Zip INTEGER,
+);
+
+CREATE TABLE Teacher(
+TeacherID int NOT NULL PRIMARY KEY,
+teacherfname varchar(255),
+teacherlname varchar(255),
+teacheremail varchar(255),
+teacherlunch varchar(255)
+);
+
+CREATE TABLE tshirt(
+ShirtInfoID int NOT NULL PRIMARY KEY,
+Shirtsize varchar(255),
+Shirtcolor varchar(255),
+Shirtdescription varchar(255)
+);
+
+
+CREATE TABLE Student(
+StudentID int NOT NULL PRIMARY KEY,
+Studentfname varchar(255),
+Studentlname varchar(255),
+Studentage int,
+Studentlunch varchar(255),
+Studentnotes varchar(255)
+);
+
+CREATE TABLE Coordinator(
+CID int NOT NULL PRIMARY KEY,
+Cfirstname varchar(255),
+clastname varchar(255),
+cemail varchar(255),
+cphonenumber int,
+
+);
+
+CREATE TABLE Volunteer(
+VID int NOT NULL PRIMARY KEY,
+Vfirstname varchar(255),
+Vlastname varchar(255),
+Vemail varchar(255),
+Vphonenumber int
+);
+
+CREATE TABLE StudentAttendance(
+StudentAttendanceID int NOT NULL PRIMARY KEY,
+StudentID int,
+EventID int,
+);
+
+CREATE TABLE CoordinatorEvent(
+CoordinatorEventID int NOT NULL PRIMARY KEY,
+CID int,
+EventID int,
+);
+
+CREATE TABLE VolunteerEvent(
+VolunteerEventID int NOT NULL PRIMARY KEY,
+StudentID INT,
+EventID INT,
+);
+
